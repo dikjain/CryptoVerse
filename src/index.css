@@ -316,7 +316,7 @@
         width: 100%;
         font-size: 12vw;
         text-wrap: nowrap;
-        transform: scale(1)translateX(0px) translateY(50px);
+        transform: scale(0.2)translateX(0px) translateY(50px);
         
     }
     .favbtn{
