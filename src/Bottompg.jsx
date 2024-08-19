@@ -17,8 +17,7 @@ export default function Bottompg({coins,chng,favshow,favagain,currs}) {
 
   const handlefav =(name)=>{
     if (retcol.includes(name.market_cap_rank)){
-      remin = retcol.indexOf(name.market_cap_rank)
-      retcol.splice(remin, 1)
+      setretcol(retcol.filter(item => item!== name.market_cap_rank))
     }else{
       setretcol([...retcol,name.market_cap_rank])
     }
