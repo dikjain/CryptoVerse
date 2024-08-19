@@ -71,6 +71,7 @@
 .mainhid{
     font-family: "Squada One", sans-serif;
     font-weight: 700;
+    text-wrap: nowrap;
 }
 
 @media screen and (1250px<width<1500px){
@@ -340,4 +341,7 @@
     #pgicont{
         width: 300px;
     }
+}
+.lllk{
+    font-family: "Squada One";
 }
