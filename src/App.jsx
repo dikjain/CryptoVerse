@@ -64,9 +64,9 @@ function App() {
     <div className="main nnn flex-col relative text-white min-h-screen w-full">
       <div id="slider" className="absolute  top-[18%] left-[10%] bg-blue-800 boo p-1 rounded-xl">
         <div id="sldcont" className="relative justify-between h-[50px] flex items-center rounded-xl    w-[25vw]">
-          <div className="slide w-[33.33%] h-full nnn rounded-xl text-4xl cursor-pointer font-[Squada One] font-extrabold relative z-[40]" onClick={handlecur}>USD</div>
-          <div className="slide w-[33.33%] h-full nnn rounded-xl text-4xl cursor-pointer font-[Squada One] font-extrabold relative z-[40]" onClick={handlecur}>INR</div>
-          <div className="slide w-[33.33%] h-full nnn rounded-xl text-4xl cursor-pointer font-[Squada One] font-extrabold relative z-[40]" onClick={handlecur}>EUR</div>
+          <div className="slide w-[33.33%] h-full nnn rounded-xl text-4xl cursor-pointer font-[Squada One] lllk font-extrabold relative z-[40]" onClick={handlecur}>USD</div>
+          <div className="slide w-[33.33%] h-full nnn rounded-xl text-4xl cursor-pointer font-[Squada One] lllk font-extrabold relative z-[40]" onClick={handlecur}>INR</div>
+          <div className="slide w-[33.33%] h-full nnn rounded-xl text-4xl cursor-pointer font-[Squada One] lllk font-extrabold relative z-[40]" onClick={handlecur}>EUR</div>
           <div className={` w-[33.33%] h-full nnn rounded-xl absolute leo bg-blue-500 ${curr == "EUR" ? "translate-x-[200%]" : curr == "INR" ? "translate-x-[100%]" : "translate-x-[0%]"} `} onClick={handlecur}></div>
         </div>
       </div>
