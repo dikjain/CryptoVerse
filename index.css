@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+    z-index: 5;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.nnn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.main{
+    background: linear-gradient(180deg,rgb(0, 0, 139),rgba(0, 0, 139,0.85),black,black,rgba(0, 0, 139,0.85));
+    position: relative;
+    z-index: 1;
+}
+.txt{
+    text-shadow: 0px 8px black;
+}
+.txt2{
+    text-shadow: 0px 3px black;
+}
+.imgx{
+    filter: drop-shadow(2px 2px black);
+}
+.lo{
+    background: linear-gradient(90deg,transparent,red,transparent);
+}
+.go{
+    background: linear-gradient(90deg,transparent,green,transparent);
+}
+
+.pgbox{
+    cursor: pointer;
+    transition: 0.2s all ease;
+    width: 18px;
+    height: 18px;
+    padding: 0;
+    &:hover{
+        padding: 20px;
+    }
+}
+.so{
+    background: linear-gradient(135deg,rgba(0,255,0,0.1),rgba(0,255,0,0.3),rgba(0,255,0,0.7));
+    box-shadow: 3px 3px 5px green,-1px -1px 2px rgba(0, 255, 0, 0.7);
+}
+.to{
+    background: linear-gradient(135deg,rgba(255,0,0,0.1),rgba(255,0,0,0.3),rgba(255,0,0,0.7));
+    box-shadow: 3px 3px 4px red, -1px -1px 2px rgba(255, 0, 0, 0.7);
+}
+.boo{
+    border: 2px white solid;
+}
+.leo{
+    transition: 0.4s all ease-out;
+}
+.slide{
+    text-shadow: 0px 3px black;
+}
+
+.favss{
+    box-shadow: 0px 1px 3px black;
+}
+.ii{
+    filter: drop-shadow(2px 2px 10px rgba(0,255,255,0.7));
+}
+
+.mainhid{
+    font-family: "Squada One", sans-serif;
+    font-weight: 700;
+    text-wrap: nowrap;
+}
+
+#slider{
+    z-index: 6;
+}
+#btmhold{
+    display: none;
+}
+.favitms{
+    transition: 0.3s all ease-out;
+}
+#btmhold{
+    transition: 0.3s all ease-out;
+}
+#vm{
+    transition: 0.2s all ease-out;
+}
+.favitms:hover{
+    height: 180px;
+    #btmhold{
+        display: block;
+        transition: 0.3s all ease-out;
+    }
+    #vm{
+        opacity: 0;
+        transition: 0.2s all ease-out;
+    }
+    transition: 0.3s all ease-out;
+
+
+}
+@media screen and (1250px<width<1500px){
+    .logo{
+        left: 12vw;
+    }
+    
+}
+@media screen and (1000px<width<1251px){
+    .logo{
+        left: 8vw;
+    }
+    .mainhid{
+        font-size: 10vw
+    }
+    .favgp{
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    .Bottompg{
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    #slider{
+        left: 5%;
+    }
+    .sectxt{
+        font-size: 2vw;
+    }
+    
+}
+@media screen and (800px<width<1000px){
+    .logo{
+        left: 4vw;
+        transform: scale(0.9);
+    }
+
+    .favgp{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .Bottompg{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    #slider{
+        left: 5%;
+    }
+    .sectxt{
+        opacity: 0;
+    }
+    .mainhid{
+        font-size: 11vw
+    }
+    .favbtn{
+
+        right: 30%;
+        transform: translateX(50%);
+    }
+    #sldcont{
+        width: 35vw;
+    }
+}
+@media screen and (650px<width<800px){
+    .logo{
+        left: 3vw;
+        transform: scale(0.9);
+        z-index: 10;
+    }
+
+    .favgp{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .Bottompg{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    #slider{
+        left: 5%;
+    }
+    .sectxt{
+        opacity: 0;
+    }
+    .mainhid{
+        width: 100%;
+        font-size: 11.1vw;
+        transform: scale(1.2)translateX(50px);
+        
+    }
+    .favbtn{
+
+        right: 30%;
+        transform: translateX(50%);
+    }
+    #sldcont{
+        width: 35vw;
+    }
+    .qqss{
+        transform: translateX(70px);
+    }
+}
+@media screen and (500px<=width<650px){
+    .slide{
+        font-size: 25px;
+    }
+
+    .logo{
+        left: 2vw;
+        transform: scale(0.6) translateX(-40px);
+        z-index: 10;
+    }
+
+    .favgp{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .Bottompg{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    #slider{
+        left: 5%;
+    }
+    .sectxt{
+        opacity: 0;
+    }
+    .mainhid{
+        width: 100%;
+        font-size: 11.5vw;
+        text-wrap: nowrap;
+        transform: scale(1.2)translateX(20px);
+        
+    }
+    .favbtn{
+       right: 20%;
+        transform: translateX(50%);
+    }
+    #sldcont{
+        width: 50vw;
+    }
+    .qqss{
+        transform: translateX(50px);
+    }
+    .imgx{
+        height: 90%;
+    }
+}
+@media screen and (400px<=width<500px){
+    .iiuu{
+        height: 32vh;
+    }
+    .slide{
+        font-size: 25px;
+    }
+    .markcap{
+        display: none;
+    }
+    .coincap{
+        display: none;
+    }
+    .symbol{
+        display: none;
+    }
+    .logo{
+        left: 2vw;
+        /* transform: scale(0.6) translateX(-40px); */
+        transform: scale(2.1) translateX(47%) translateY(30px);
+        z-index: 4;
+        mix-blend-mode:color;
+        opacity: 0.5;
+    }
+
+    .favgp{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .Bottompg{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    #slider{
+        left: 5%;
+    }
+    .sectxt{
+        opacity: 0;
+    }
+    .mainhid{
+        width: 100%;
+        font-size: 12vw;
+        text-wrap: nowrap;
+        transform: scale(1.2)translateX(0px) translateY(30px);
+        font-size: 18vw;
+        position: relative;
+        z-index: 6;
+            
+        
+    }
+    .favbtn{
+       right: 20%;
+        transform: translateX(50%);
+        width: 100px;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        /* text-align: center; */
+    }
+    #sldcont{
+        width: 50vw;
+    }
+    .qqss{
+        transform: translateX(50px);
+    }
+    .imgx{
+        height: 90%;
+    }
+}
+@media screen and (300px<=width<400px){
+    .iiuu{
+        height: 30vh;
+    }
+    .slide{
+        font-size: 25px;
+    }
+    .markcap{
+        display: none;
+    }
+    .coincap{
+        display: none;
+    }
+    .symbol{
+        display: none;
+    }
+    .logo{
+        left: 50%;
+        transform: scale(2) translateX(-27%) translateY(30px);
+        z-index: 4;
+        mix-blend-mode:color;
+        opacity: 0.5;
+    }
+
+    .favgp{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .Bottompg{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    #slider{
+        z-index: 6;
+        left: 5%;
+    }
+    .sectxt{
+        opacity: 0;
+    }
+    .mainhid{
+        width: 100%;
+        font-size: 21vw;
+        position: relative;
+        z-index: 6;
+        transform: scale(1)translateX(0px) translateY(50px);
+        
+    }
+    .favbtn{
+       right: 20%;
+        transform: translateX(50%);
+        width: 100px;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        top: -50px;
+        /* text-align: center; */
+    }
+    #sldcont{
+        width: 50vw;
+    }
+    .qqss{
+        transform: translateX(25px);
+    }
+    .imgx{
+        height: 70%;
+        transform: translateX(-10px);
+    }
+    #pgicont{
+        width: 300px;
+    }
+}
+.lllk{
+    font-family: "Squada One";
+}
