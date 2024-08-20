@@ -1,5 +1,6 @@
 import React from 'react'
 import { useEffect,useState } from 'react';
+import Dropsvg from './Dropsvg';
 
 export default function Favpg({favdata,favshow,coins,getfavs,currs}){
   let ppp = 6;
@@ -25,20 +26,35 @@ export default function Favpg({favdata,favshow,coins,getfavs,currs}){
 
   return (
     <div className='w-full h-[100vh] relative   gap-10 px-[200px] favgp'>
-        <div id="pgicont" className='absolute left-[50%] text-center  w-[400px] min-h-[40px] translate-x-[-50%] bottom-[40px] nnn'>
+        <div id="pgicont" className='absolute left-[50%] text-center  w-[400px] min-h-[40px] translate-x-[-50%] bottom-[25px] nnn'>
         {pgsnum.map((ll)=>{
           return <div key={ll} id={`pgbox${ll}`} onClick={handlepg} className={`${pg===ll ? "bg-green-600 ":" bg-gray-600 "} pgbox mx-[2px] rounded-full overflow-hiddentext-center nnn `}>{ll}</div>
         })}
       </div>
         <button onClick={favshow} className='favss favbtn absolute h-[40px] w-[160px] rounded-xl px-5  py-2 top-[-90px] right-[20%] bg-blue-500'>Favourites</button>
-        {trimcoin.map((q)=>{return <div className={`h-[120px] my-5  lllk  overflow-hidden ${Number(coins[q-1].price_change_percentage_24h)>=0? "so":"to"}   flex items-center justify-around w-full rounded-xl`}>
-          <img src={coins[q-1].image} className='imgx  h-[110%]'></img>
+        {trimcoin.map((q)=>{return <div className={`h-[90px] favitms my-5  lllk relative overflow-hidden ${Number(coins[q-1].price_change_percentage_24h)>=0? "so":"to"}   w-full rounded-xl`}>
+          <div id='tophold' className=' flex items-center justify-around h-[90px] w-full relative'>
+          <img src={coins[q-1].image} className='imgx mx-1 h-[100%]'></img>
+          <div id="vm"  className='absolute bottom-0 '><Dropsvg></Dropsvg></div>
           <div className='text-3xl font-[400]  txt2'>{coins[q-1].name}({coins[q-1].symbol})</div>
           <div className='text-xl font-[400]'>{currs == "EUR" ? "€" : currs == "INR" ? "₹" : "$"}{coins[q-1].current_price}</div>
-          <div className='text-xl font-[400]'>{coins[q-1].price_change_percentage_24h}%</div>
-          <div className='text-xl font-[400]'>{currs == "EUR" ? "€" : currs == "INR" ? "₹" : "$"}{coins[q-1].market_cap}</div>
-          <div className='text-xl font-[400]'>{currs == "EUR" ? "€" : currs == "INR" ? "₹" : "$"}{coins[q-1].total_volume}</div>
-        </div>})}
+          </div>
+          <div id='btmhold' className='w-full h-[90px]  absolute top-[90px] flex flex-col'>
+          <div id="btmhold1" className='w-full h-fit relative flex items-center justify-around'>
+          <div className='text-xl relative z-[100] font-[400]'>24hr change:</div>
+          <div className='text-xl relative z-[100] font-[400]'>{coins[q-1].price_change_percentage_24h}%</div>
+          </div>
+          <div id="btmhold2"  className='w-full h-fit relative flex items-center justify-around'>
+          <div className='text-xl relative z-[100] font-[400]'>Market Cap:</div>
+          <div className='text-xl relative z-[100] font-[400]'>{currs == "EUR" ? "€" : currs == "INR" ? "₹" : "$"}{coins[q-1].market_cap}</div>
+          </div>
+          <div id="btmhold3"  className='w-full h-fit relative flex items-center justify-around'>
+          <div className='text-xl relative z-[100] font-[400]'>Total Volume:</div>
+          <div className='text-xl relative z-[100] font-[400]'>{currs == "EUR" ? "€" : currs == "INR" ? "₹" : "$"}{coins[q-1].total_volume}</div>
+          </div>
+          </div>
+        </div>
+      })}
     </div>
   )
 }
