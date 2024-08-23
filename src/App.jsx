@@ -2,7 +2,6 @@ import { useEffect, useState } from "react"
 import Toppg from "./Toppg";
 import Bottompg from "./Bottompg";
 import Favpg from "./Favpg";
-import { useGSAP } from "@gsap/react";
 import {gsap} from "gsap";
 
 
