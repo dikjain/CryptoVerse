@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Msvg from './Msvg.jsx'
 
+
 export default function Bottompg({coins,chng,favshow,favagain,currs}) {
   let ppp = 10
   const [pg,crntpg] = useState(1)
@@ -8,7 +9,12 @@ export default function Bottompg({coins,chng,favshow,favagain,currs}) {
   const [lst,setlst] = useState(pg*ppp)  
   const [fst,setfst] = useState(pg*ppp -ppp)  
   let trimcoin = coins.slice(fst,lst)
-  let remin = 0
+let qqlli = 0
+  //gsaphook
+
+
+
+
   
   let pgsnum = []
   for(let i=1;i<=coins.length/ppp;i++){
@@ -61,6 +67,7 @@ export default function Bottompg({coins,chng,favshow,favagain,currs}) {
           <h1 className='relative markcap left-[5vw]'>Market-Cap</h1>
           <h1 className='relative right-[-20px]'>24hr Change</h1>
         </div>
+        {/* ${coin.market_cap_rank<=10 ? 'coinns' :"pppppo"} */}
       {trimcoin.map((coin,i) => (
         <div key={coin.id} className={`${Number(coin.price_change_percentage_24h)>=0? "go":"lo"}   w-full overflow-hidden h-[7vh] px-10 py-2 my-[10px] flex justify-between items-center`}>
           <div id="details" className='flex relative overflow-visible items-center justify-between h-full w-[20%]'>

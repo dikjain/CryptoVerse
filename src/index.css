@@ -60,6 +60,11 @@
 .boo{
     border: 2px white solid;
 }
+
+/* .coinns{
+    opacity: 0;
+} */
+
 .leo{
     transition: 0.4s all ease-out;
 }

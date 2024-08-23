@@ -3,12 +3,18 @@ import Toppg from "./Toppg";
 import Bottompg from "./Bottompg";
 import Favpg from "./Favpg";
 
+
+let qqllss = 0
+
 function App() {
   let [coin,setcoin] = useState([])
   let [curr,setcurr] = useState("USD")
 
 
 
+// gsapfncn()
+  
+  
   let aq = 0
   let [apiurl,setapiurl] = useState(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd`)
   if(aq == 0) {
