@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import Toppg from "./Toppg";
 import Bottompg from "./Bottompg";
 import Favpg from "./Favpg";
-import {gsap} from "gsap";
+import gsap from "gsap";
 
 
 
@@ -10,49 +10,49 @@ function App() {
   let [coin,setcoin] = useState([])
   let [curr,setcurr] = useState("USD")
 
-  // useEffect(() => {
-  //   // Target the element with class "coinns"
-  //   let teen = gsap.from(".coinns", {
-  //     opacity: 0,
-  //     duration: 1, 
-  //     stagger:0.05,
-  //     y:40,
-  //     ease: "power3.inOut",
-  //   });
+  useEffect(() => {
+    // Target the element with class "coinns"
+    let teen = gsap.from(".coinns", {
+      opacity: 0,
+      duration: 1, 
+      stagger:0.05,
+      y:40,
+      ease: "power3.inOut",
+    });
 
 
 
-  //   return ()=>teen.revert()
-  // }, [coin]); 
+    return ()=>teen.revert()
+  }, [coin]); 
 
-  // useEffect(() => {
-  //   gsap.from("#slider", {
-  //     opacity: 0,
-  //     duration: 1, 
-  //     x:-100,
-  //     ease: "power3.inOut",
-  //   });
-  //    gsap.from(".favbtn", {
-  //     opacity: 0,
-  //     duration: 1, 
-  //     x:100,
-  //     ease: "power3.inOut",
-  //   });
-  //    gsap.from(".logo", {
-  //     opacity: 0,
-  //     duration: 1, 
-  //     ease: "power3.inOut",
-  //   });
-  //    gsap.from(".mainhid", {
-  //     opacity: 0,
-  //     duration: 1, 
-  //     ease: "power3.inOut",
-  //   });
-  //    gsap.from(".main", {
-  //     duration: 1, 
-  //     ease: "power3.inOut",
-  //   });
-  // },[])
+  useEffect(() => {
+    gsap.from("#slider", {
+      opacity: 0,
+      duration: 1, 
+      x:-100,
+      ease: "power3.inOut",
+    });
+     gsap.from(".favbtn", {
+      opacity: 0,
+      duration: 1, 
+      x:100,
+      ease: "power3.inOut",
+    });
+     gsap.from(".logo", {
+      opacity: 0,
+      duration: 1, 
+      ease: "power3.inOut",
+    });
+     gsap.from(".mainhid", {
+      opacity: 0,
+      duration: 1, 
+      ease: "power3.inOut",
+    });
+     gsap.from(".main", {
+      duration: 1, 
+      ease: "power3.inOut",
+    });
+  },[])
 
 
 
