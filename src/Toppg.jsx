@@ -32,62 +32,17 @@ export default function Toppg() {
       }
     },timr);
     
-    setTimeout(()=>{
-      setspn1("C" + wrdgen(5));
-      word = "";
-      setspn2(wrdgen(5));
-      word = "";
-    },timr*(prfmchng+1))
-    setTimeout(()=>{
-      setspn1("CR" + wrdgen(4));
-      word = "";
-      setspn2(wrdgen(5));
-      word = "";
-    },timr*(prfmchng+2))
-    setTimeout(()=>{
-      setspn1("CRY" + wrdgen(3));
-      word = "";
-      setspn2(wrdgen(5));
-      word = "";
-    },timr*(prfmchng+3))
-    setTimeout(()=>{
-      setspn1("CRYP" + wrdgen(2));
-      word = "";
-      setspn2(wrdgen(5));
-      word = "";
-    },timr*(prfmchng+4))
-    setTimeout(()=>{
-      setspn1("CRYPT" + wrdgen(1));
-      word = "";
-      setspn2(wrdgen(5));
-      word = "";
-    },timr*(prfmchng+5))
-    setTimeout(()=>{
-      setspn1("CRYPTO");
-      word = "";
-      setspn2(wrdgen(5));
-      word = "";
-    },timr*(prfmchng+6))
-    setTimeout(()=>{
-      setspn2("V"+wrdgen(4));
-      word = "";
-    },timr*(prfmchng+7))
-    setTimeout(()=>{
-      setspn2("VE"+wrdgen(3));
-      word = "";
-    },timr*(prfmchng+8))
-    setTimeout(()=>{
-      setspn2("VER"+wrdgen(2));
-      word = "";
-    },timr*(prfmchng+9))
-    setTimeout(()=>{
-      setspn2("VERS"+wrdgen(1));
-      word = "";
-    },timr*(prfmchng+10))
-    setTimeout(()=>{
-      setspn2("VERSE");
-      word = "";
-    },timr*(prfmchng+10))
+    setTimeout(()=>{setspn1("C" + wrdgen(5));word = "";setspn2(wrdgen(5));word = ""; },timr*(prfmchng+1))
+    setTimeout(()=>{setspn1("CR" + wrdgen(4));word = "";setspn2(wrdgen(5));word = "";},timr*(prfmchng+2))
+    setTimeout(()=>{setspn1("CRY" + wrdgen(3));word = "";setspn2(wrdgen(5));word = ""; },timr*(prfmchng+3))
+    setTimeout(()=>{setspn1("CRYP" + wrdgen(2));word = "";setspn2(wrdgen(5));word = ""; },timr*(prfmchng+4))
+    setTimeout(()=>{setspn1("CRYPT" + wrdgen(1));word = "";setspn2(wrdgen(5));word = ""; },timr*(prfmchng+5))
+    setTimeout(()=>{setspn1("CRYPTO");word = "";setspn2(wrdgen(5));word = ""; },timr*(prfmchng+6))
+    setTimeout(()=>{setspn2("V"+wrdgen(4));word = "";},timr*(prfmchng+7))
+    setTimeout(()=>{setspn2("VE"+wrdgen(3));word = "";},timr*(prfmchng+8))
+    setTimeout(()=>{setspn2("VER"+wrdgen(2));word = "";},timr*(prfmchng+9))
+    setTimeout(()=>{setspn2("VERS"+wrdgen(1));word = "";},timr*(prfmchng+10))
+    setTimeout(()=>{setspn2("VERSE");word = "";},timr*(prfmchng+11))
 
   
     return () => clearInterval(inter); // Clean up interval on component unmount

@@ -20,6 +20,8 @@
 }
 .main{
     background: linear-gradient(180deg,rgb(0, 0, 139),rgba(0, 0, 139,0.85),black,black,rgba(0, 0, 139,0.85));
+
+    
     position: relative;
     z-index: 1;
 }
@@ -61,9 +63,6 @@
     border: 2px white solid;
 }
 
-/* .coinns{
-    opacity: 0;
-} */
 
 .leo{
     transition: 0.4s all ease-out;

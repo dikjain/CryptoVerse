@@ -67,9 +67,9 @@ let qqlli = 0
           <h1 className='relative markcap left-[5vw]'>Market-Cap</h1>
           <h1 className='relative right-[-20px]'>24hr Change</h1>
         </div>
-        {/* ${coin.market_cap_rank<=10 ? 'coinns' :"pppppo"} */}
+       
       {trimcoin.map((coin,i) => (
-        <div key={coin.id} className={`${Number(coin.price_change_percentage_24h)>=0? "go":"lo"}   w-full overflow-hidden h-[7vh] px-10 py-2 my-[10px] flex justify-between items-center`}>
+        <div key={coin.id} className={`${Number(coin.price_change_percentage_24h)>=0? "go":"lo"}   coinns  w-full overflow-hidden h-[7vh] px-10 py-2 my-[10px] flex justify-between items-center`}>
           <div id="details" className='flex relative overflow-visible items-center justify-between h-full w-[20%]'>
             <div onClick={()=>handlefav(coin)} className='absolute left-[-45px]'>< Msvg col={retcol.includes(coin.market_cap_rank)?"yellow":"white"}/></div>
             <img src={coin.image} className='imgx absolute h-[110%]'></img>
