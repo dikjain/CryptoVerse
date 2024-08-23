@@ -26,7 +26,7 @@ export default function Favpg({favdata,favshow,coins,getfavs,currs}){
 
   return (
     <div className='w-full h-[100vh] relative   gap-10 px-[200px] favgp'>
-        <div id="pgicont" className='absolute left-[50%] text-center  w-[400px] min-h-[40px] translate-x-[-50%] bottom-[25px] nnn'>
+        <div id="pgicont" className='absolute left-[50%] text-center  z-[10] w-[400px] min-h-[40px] translate-x-[-50%] bottom-[25px] nnn'>
         {pgsnum.map((ll)=>{
           return <div key={ll} id={`pgbox${ll}`} onClick={handlepg} className={`${pg===ll ? "bg-green-600 ":" bg-gray-600 "} pgbox mx-[2px] rounded-full overflow-hiddentext-center nnn `}>{ll}</div>
         })}
