@@ -77,11 +77,12 @@ function App() {
       
       fetch(apiurl, options)
       .then(response => response.json())
-      .then(response => setcoin(response))
-      setsavedata(coin)
+      .then(response => setcoin(response) & setsavedata(response));
 
-    
-  },[apiurl])
+
+        
+      
+    },[apiurl])
 
 
     const [showfav,setshowfav] = useState(true)
@@ -123,6 +124,7 @@ function App() {
         crntpg(1)  
         
       }else{
+
         let tryingsearch = savedata.filter((q)=>String(q.id).toLowerCase().startsWith(searchtext));
         setcoin(tryingsearch)
         crntpg(1)  
