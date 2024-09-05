@@ -110,9 +110,22 @@
         transition: 0.2s all ease-out;
     }
     transition: 0.3s all ease-out;
-
-
 }
+
+
+.inptfld{
+    transform: translate(-20vw);
+    width: 10vw;
+    right: 0;
+    box-shadow: 0px 0px 10px black;
+    transition: 0.5s all ease-out;
+}
+
+.srchbar{
+    box-shadow: 0px 0px 10px black;
+    cursor: pointer;
+}
+
 @media screen and (1250px<width<1500px){
     .logo{
         left: 12vw;
@@ -396,6 +409,11 @@
     }
     #pgicont{
         width: 300px;
+    }
+    .inptfld{
+        transform: translate(-40px,1vh);
+        width: 0vw;
+        right: 0;
     }
 }
 .lllk{

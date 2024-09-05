@@ -8,7 +8,7 @@ export default function Toppg() {
   let random = ""
   let word = ""
   let intss = 0
-  let timr = 75
+  let timr = 100
   let prfmchng = 5
 
   function wrdgen(n){
