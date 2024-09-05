@@ -99,6 +99,7 @@ function App() {
 
 
     const handleShowfav = () => {
+      setcoin(savedata)
       setshowfav(showfav=>!showfav)
     }
 
