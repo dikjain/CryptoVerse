@@ -2,14 +2,13 @@ import React, { useEffect, useState } from 'react'
 import Msvg from './Msvg.jsx'
 
 
-export default function Bottompg({pg,searchtext,crntpg,coins,chng,favshow,favagain,currs}) {
+export default function Bottompg({pg,crntpg,coins,chng,favshow,favagain,currs}) {
   let ppp = 10
   
   const [retcol,setretcol] = useState([...favagain])
   const [lst,setlst] = useState(pg*ppp)  
   const [fst,setfst] = useState(pg*ppp -ppp)  
   let trimcoin = coins.slice(fst,lst)
-  let qqlli = 0
   //gsaphook
 
 

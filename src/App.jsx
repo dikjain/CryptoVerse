@@ -100,7 +100,6 @@ function App() {
 
     const handleShowfav = () => {
       setshowfav(showfav=>!showfav)
-      let temp = getfav
     }
 
     const handlecur = (e) => {
@@ -124,11 +123,9 @@ function App() {
         crntpg(1)  
         
       }else{
-
-        let tryingsearch = savedata.filter((q)=>String(q.id).toLowerCase().startsWith(searchtext));
+        let tryingsearch = savedata.filter((q) => String(q.id).toLowerCase().startsWith(searchtext.toLowerCase()));
         setcoin(tryingsearch)
-        crntpg(1)  
-        
+        crntpg(1) 
       }
     },[searchtext])
 
