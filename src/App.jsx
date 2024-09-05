@@ -115,17 +115,22 @@ function App() {
 
 
     const handlesearch = (e)=>{
-      setsearchtext(e.target.value)
+      if(showfav){
+        setsearchtext(e.target.value)
+      }
     }
     useEffect(()=>{
-      if (searchtext.length <1 || searchtext == " "|| searchtext == "") {
-        setcoin(savedata)
-        crntpg(1)  
-        
-      }else{
-        let tryingsearch = savedata.filter((q) => String(q.id).toLowerCase().startsWith(searchtext.toLowerCase()));
-        setcoin(tryingsearch)
-        crntpg(1) 
+      if(showfav){
+
+        if (searchtext.length <1 || searchtext == " "|| searchtext == "") {
+          setcoin(savedata)
+          crntpg(1)  
+          
+        }else{
+          let tryingsearch = savedata.filter((q) => String(q.id).toLowerCase().startsWith(searchtext.toLowerCase()));
+          setcoin(tryingsearch)
+          crntpg(1) 
+        }
       }
     },[searchtext])
 
@@ -148,8 +153,9 @@ function App() {
 
   return (
     <div className="main nnn flex-col relative text-white min-h-screen w-full">
-      <input ref={searching} type="text" placeholder="Search" value={searchtext} onChange={handlesearch} className="py-2 px-5 rounded-full inptfld text-black absolute top-[1.5vh] opacity-1 z-[2000]" />
-      <div className=" absolute top-0 right-0 z-[400000]" onClick={showsearch}><Search /></div>
+
+      {showfav ? <input ref={searching} type="text" placeholder="Search" value={searchtext} onChange={handlesearch} className="py-2 px-5 rounded-full inptfld text-black absolute top-[1.5vh] opacity-1 z-[2000]" /> : null}
+      {showfav ?<div className=" absolute top-0 right-0 z-[400000]" onClick={showsearch}><Search /></div> : null}
       <div id="slider" className="absolute  top-[18%] left-[10%] bg-blue-800 boo p-1 rounded-xl">
         <div id="sldcont" className="relative justify-between h-[50px] flex items-center rounded-xl    w-[25vw]">
           <div className="slide w-[33.33%] h-full nnn rounded-xl text-4xl cursor-pointer font-[Squada One] lllk font-extrabold relative z-[40]" onClick={handlecur}>USD</div>
