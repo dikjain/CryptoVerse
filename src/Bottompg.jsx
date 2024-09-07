@@ -11,8 +11,14 @@ export default function Bottompg({pg,crntpg,coins,chng,favshow,favagain,currs}) 
   let trimcoin = coins.slice(fst,lst)
   //gsaphook
 
-
-
+  useEffect(()=>{
+    if(window.localStorage.getItem("favourites_local")){
+      setretcol(JSON.parse(window.localStorage.getItem("favourites_local")))
+    }
+  },[])
+  useEffect(()=>{
+    window.localStorage.setItem("favourites_local",JSON.stringify(retcol))
+  },[retcol])
 
   
   let pgsnum = []

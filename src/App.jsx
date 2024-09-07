@@ -109,8 +109,8 @@ function App() {
       setcurr(e.target.textContent)
 
     }
-    
-
+   
+   
     const [pg,crntpg] = useState(1)
 
 
@@ -138,16 +138,59 @@ function App() {
     const [searchvis,setsearchvis] = useState(true)
 
     const showsearch = ()=>{
-      if(!searchvis){ 
-        searching.current.style.width = "0vw";
-        searching.current.style.transform = "translateX(-40px) translateY(1vh)";
-        setsearchvis(true)
-      }else{
-        searching.current.style.width = "50vw";
-        searching.current.style.transform = "translateX(-25vw) translateY(1vh)";
-        setsearchvis(false)
-
+      var x1 = window.matchMedia("(max-width: 500px)");
+      var x2 = window.matchMedia("(min-width:500px)");
+      var x3 = window.matchMedia("(max-width: 650px)");
+      var x4 = window.matchMedia("(min-width: 650px)");
+      var x5 = window.matchMedia("(max-width: 800px)");
+      var x6 = window.matchMedia("(min-width: 800px)");
+      if (x1.matches) { 
+        if(!searchvis){ 
+          searching.current.style.width = "0vw";
+          searching.current.style.transform = "translateX(-10vw) translateY(1vh)";
+          setsearchvis(true)
+        }else{
+          searching.current.style.width = "50vw";
+          searching.current.style.transform = "translateX(-25vw) translateY(1vh)";
+          setsearchvis(false)
+  
+        }
+      }else if(x2.matches & x3.matches) {
+        if(!searchvis){ 
+          searching.current.style.width = "0vw";
+          searching.current.style.transform = "translateX(-10vw) translateY(18vh)";
+          setsearchvis(true)
+        }else{
+          searching.current.style.width = "50vw";
+          searching.current.style.transform = "translateX(-25vw) translateY(18vh)";
+          setsearchvis(false)
+  
+        }
+      }else if(x4.matches & x5.matches) {
+        if(!searchvis){ 
+          searching.current.style.width = "0vw";
+          searching.current.style.transform = "translateX(-10vw) translateY(30vh)";
+          setsearchvis(true)
+        }else{
+          searching.current.style.width = "50vw";
+          searching.current.style.transform = "translateX(-25vw) translateY(30vh)";
+          setsearchvis(false)
+  
+        }
+      }else if(x6.matches) {
+        if(!searchvis){ 
+          searching.current.style.width = "0vw";
+          searching.current.style.transform = "translateX(-10vw) translateY(1vh)";
+          setsearchvis(true)
+        }else{
+          searching.current.style.width = "20vw";
+          searching.current.style.transform = "translateX(-18vw) translateY(1vh)";
+          setsearchvis(false)
+  
+        }
       }
+    
+
 
     }
     

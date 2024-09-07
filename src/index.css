@@ -82,6 +82,7 @@
     font-family: "Squada One", sans-serif;
     font-weight: 700;
     text-wrap: nowrap;
+    font-size: 9.5vw;
 }
 
 #slider{
@@ -114,16 +115,21 @@
 
 
 .inptfld{
-    transform: translate(-20vw);
+    transform: translate(-10vw,1vh);
     width: 10vw;
     right: 0;
     box-shadow: 0px 0px 10px black;
     transition: 0.5s all ease-out;
+    width: 0vw;
 }
 
 .srchbar{
     box-shadow: 0px 0px 10px black;
     cursor: pointer;
+}
+.logo{
+    left: 15vw;
+    height: 10vw;
 }
 
 @media screen and (1250px<width<1500px){
@@ -187,11 +193,13 @@
         width: 35vw;
     }
 }
-@media screen and (650px<width<800px){
+@media screen and (650px<=width<=800px){
     .logo{
-        left: 3vw;
-        transform: scale(0.9);
-        z-index: 10;
+        left: 50vw;
+        transform:  translateX(-50%) ;
+        z-index: 1;
+        height: 300px;
+        opacity: 0.6;
     }
 
     .favgp{
@@ -204,6 +212,7 @@
     }
     #slider{
         left: 5%;
+        transform: translateY(-20px);
     }
     .sectxt{
         opacity: 0;
@@ -211,19 +220,29 @@
     .mainhid{
         width: 100%;
         font-size: 14vw;
-        transform: scale(1.2)translateX(50px);
+        transform: scale(1.2);
         
     }
     .favbtn{
 
         right: 30%;
-        transform: translateX(50%);
+        transform: translateX(50%)translateY(-20px);
+        ;
     }
     #sldcont{
         width: 35vw;
     }
     .qqss{
         transform: translateX(70px);
+    }
+    .inptfld{
+        transform: translate(-10vw,30vh);
+        width: 0vw;
+        right: 0;
+    }
+    .srchbar{
+        transform: translate(-10vw,31vh);
+
     }
 }
 @media screen and (500px<=width<650px){
@@ -232,8 +251,6 @@
     }
 
     .logo{
-        left: 2vw;
-        transform: scale(0.6) translateX(-40px);
         z-index: 10;
     }
 
@@ -255,12 +272,12 @@
         width: 100%;
         font-size: 14vw;
         text-wrap: nowrap;
-        transform: scale(1.2)translateX(20px);
+        transform: scale(1.4)translateX(0px);
         
     }
     .favbtn{
        right: 20%;
-        transform: translateX(50%);
+        transform: translateX(50%) translateY(3vh);
     }
     #sldcont{
         width: 50vw;
@@ -270,6 +287,24 @@
     }
     .imgx{
         height: 90%;
+    }
+    .inptfld{
+        transform: translate(-10vw,18vh);
+        width: 0vw;
+        right: 0;
+    }
+    .srchbar{
+        transform: translate(-10vw,19vh);
+
+    }
+    .logo{
+        left: 2vw;
+        /* transform: scale(0.6) translateX(-40px); */
+        transform: scale(1.7) translateX(-40%) translateY(30px);
+        left: 50%;
+        z-index: 4;
+        mix-blend-mode:color;
+        opacity: 0.5;
     }
 }
 @media screen and (400px<=width<500px){
@@ -338,6 +373,11 @@
     }
     .imgx{
         height: 90%;
+    }
+    .inptfld{
+        transform: translate(-10vw,1vh);
+        width: 0vw;
+        right: 0;
     }
 }
 @media screen and (300px<=width<400px){
