@@ -129,7 +129,6 @@
 }
 .logo{
     left: 15vw;
-    height: 10vw;
 }
 
 @media screen and (1250px<width<1500px){
